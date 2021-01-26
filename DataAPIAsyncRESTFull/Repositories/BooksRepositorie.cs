@@ -57,8 +57,8 @@ namespace EdgarAparico.Data.APIAsyncRESTFull.Repositories
             //Cuando CLR disponga del repositorio
             //Verificamos si el contexto no es nulo y llamamos al metodo dispose y aegura que se elimine
 
-            if (disposing)
-
+            if (disposing) 
+            { 
                 if(DbContextAPI != null)
                 {
                     DbContextAPI.Dispose();
@@ -66,5 +66,6 @@ namespace EdgarAparico.Data.APIAsyncRESTFull.Repositories
                 }  
             }
         }
+
     }
 }

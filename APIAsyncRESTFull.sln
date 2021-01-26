@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIAsyncRESTFull", "APIAsyncRESTFull\APIAsyncRESTFull.csproj", "{A34D6A69-29DD-453F-9C9A-9A9D80A7F9C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIAsyncRESTFull", "APIAsyncRESTFull\APIAsyncRESTFull.csproj", "{A34D6A69-29DD-453F-9C9A-9A9D80A7F9C0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. UI", "1. UI", "{93AF3BE0-6727-49EF-89A2-16E95180A116}"
 EndProject
@@ -11,9 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Business", "2. Business"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Data", "3. Data", "{4C8E2A0D-AD65-43AD-803C-EF1F04C2619F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAPIAsyncRESTFull", "DataAPIAsyncRESTFull\DataAPIAsyncRESTFull.csproj", "{A9F4F627-F6CB-4CD8-AD27-EF50945C6F3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAPIAsyncRESTFull", "DataAPIAsyncRESTFull\DataAPIAsyncRESTFull.csproj", "{A9F4F627-F6CB-4CD8-AD27-EF50945C6F3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntitiesAPIAsyncRESTFull", "EntitiesAPIAsyncRESTFull\EntitiesAPIAsyncRESTFull.csproj", "{047341D8-2E9C-497D-A24D-96F8C926009C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntitiesAPIAsyncRESTFull", "EntitiesAPIAsyncRESTFull\EntitiesAPIAsyncRESTFull.csproj", "{047341D8-2E9C-497D-A24D-96F8C926009C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

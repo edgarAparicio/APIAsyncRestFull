@@ -7,32 +7,32 @@ using EdgarAparico.Data.APIAsyncRESTFull.Repositories;
 using EdgarAparico.Data.APIAsyncRESTFull.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
-namespace APIAsyncRESTFull
+namespace APIRESTFullAsync
 {
     public class Startup
     {
-        public Startup(IConfiguration config)
+        public Startup(IConfiguration configuration)
         {
-            Configuration = config;
+            Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
             var connectionString = Configuration["ConnectionStrings:APIAsyncRESTFullDbConnectionString"];
             services.AddDbContext<DbContextAPIAsyncRESTFull>(o => o.UseSqlServer(connectionString));
             services.AddScoped<IBook, BooksRepositorie>();
             services.AddControllers();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
