@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EdgarAparicio.Business.Entities.APIAsyncRESTFull;
 using EdgarAparico.Data.APIAsyncRESTFull.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,19 +21,45 @@ namespace APIAsyncRESTFull.Controllers
             this.booksRepositorie = booksRepositorie;
         }
 
-        //Metodo normal
-        //public IActionResult GetBooks()
-        //{
-        //    var books = booksRepositorie.GetBooksAsync();
-        //    return Ok(books);
-        //}
+        //Metodo normal para obtener lista de libros
+        public IActionResult ObtenerLibros()
+        {
+            var books = booksRepositorie.GetBooksAsync();
+            return Ok(books);
+        }
 
-        //Metodo asincrono
-        [HttpGet("libros")]
+        //Metodo asincrono para obtener lista de libros 
+        [HttpGet("ObtenerListaLibros")]
         public async Task<IActionResult> GetBooks()
         {
             var books = await booksRepositorie.GetBooksAsync();
             return Ok(books);
         }
+
+        //Metodo normal para obtener un libro
+        public IActionResult ObtenerLibro(Guid bookId)
+        {
+            var book = booksRepositorie.GetBookAsync(bookId);
+            return Ok(book);
+        }
+
+        //Metodo async para obtener un libro
+        [HttpGet("ObtenerLibro")]
+        [Route("{bookId}")]
+
+        public async Task<IActionResult> GetBook(Guid bookId)
+        {
+            var book = await booksRepositorie.GetBookAsync(bookId);
+            if (book == null)
+            {
+                return NotFound();
+            }
+            return Ok(book);
+
+        }
+
+
+
+
     }
 }
